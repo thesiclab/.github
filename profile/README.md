@@ -1,8 +1,8 @@
-# SiC Lab
+# The SiC Lab
 
 **Si + C. A compound, not a mixture.**
 
-SiC Lab is Dan Pittman and Mabus, his AI agent. Silicon is the AI. Carbon is the human. One atom of each, pronounced "sick".
+The SiC Lab is Dan Pittman and Mabus, his AI agent. Silicon is the AI. Carbon is the human. One atom of each, pronounced "sick".
 
 In a mixture, the parts sit side by side and can be picked apart. In a compound, they bond into something neither is on its own.
 
