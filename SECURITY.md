@@ -44,7 +44,7 @@ All our projects are early and have no releases yet. We fix security problems on
 
 | Repository     | Supported |
 | -------------- | --------- |
-| pr-caddie      | `main`    |
+| sic-pr-caddie      | `main`    |
 | sicrules       | `main`    |
 | edition-engine | `main`    |
 | .github        | `main`    |

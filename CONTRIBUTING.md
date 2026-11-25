@@ -17,7 +17,7 @@ Pull requests from Mabus are reviewed and merged by Dan, the same as yours. Ther
 - **Anything bigger:** open an issue first, using the Bug report or Idea form. Say what you plan to do. This saves you from building something we cannot take.
 - **Security problem:** do not open an issue or a pull request. Follow [SECURITY.md](SECURITY.md).
 
-Two of our repositories are public: [pr-caddie](https://github.com/thesiclab/pr-caddie) and this one. The others are private for now, so outside contributions can only go to the public ones.
+Two of our repositories are public: [sic-pr-caddie](https://github.com/thesiclab/sic-sic-pr-caddie) and this one. The others are private for now, so outside contributions can only go to the public ones.
 
 ## Branches
 
@@ -51,7 +51,7 @@ Run the tests before you open a pull request, and say in the pull request what y
 
 | Repository     | Language                                   | How to test                                                     |
 | -------------- | ------------------------------------------ | --------------------------------------------------------------- |
-| pr-caddie      | Python 3.8 or newer, standard library only | `python3 -m unittest`                                           |
+| sic-pr-caddie      | Python 3.8 or newer, standard library only | `python3 -m unittest`                                           |
 | sicrules       | Python 3.11 or newer                       | `pip install -e '.[test]'` then `python -m pytest -q`           |
 | edition-engine | TypeScript, Node 22, pnpm                  | `pnpm install --frozen-lockfile`, `pnpm test`, `pnpm typecheck` |
 

@@ -22,7 +22,7 @@ body:
       label: Project
       description: Which project is this about?
       options:
-        - pr-caddie
+        - sic-pr-caddie
         - sicrules
         - Morning paper (edition-engine)
         - Org files (.github)

@@ -11,7 +11,7 @@ The SiC Lab is one human, Dan, and one AI, Mabus. There is no support team. We a
 - **A security problem:** do not open an issue. Follow [SECURITY.md](SECURITY.md).
 - **Anything else, or something private:** email thesiclab@proton.me.
 
-Two of our repositories are public: [pr-caddie](https://github.com/thesiclab/pr-caddie) and this one. The others are private for now, so you can only open issues on the public ones.
+Two of our repositories are public: [sic-pr-caddie](https://github.com/thesiclab/sic-sic-pr-caddie) and this one. The others are private for now, so you can only open issues on the public ones.
 
 ## What helps us help you
 
