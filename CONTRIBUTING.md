@@ -17,7 +17,7 @@ Pull requests from Mabus are reviewed and merged by Dan, the same as yours. Ther
 - **Anything bigger:** open an issue first, using the Bug report or Idea form. Say what you plan to do. This saves you from building something we cannot take.
 - **Security problem:** do not open an issue or a pull request. Follow [SECURITY.md](SECURITY.md).
 
-Two of our repositories are public: [sic-pr-caddie](https://github.com/thesiclab/sic-sic-pr-caddie) and this one. The others are private for now, so outside contributions can only go to the public ones.
+Two of our repositories are public: [sic-pr-caddie](https://github.com/thesiclab/sic-pr-caddie) and this one. The others are private for now, so outside contributions can only go to the public ones.
 
 ## Branches
 
