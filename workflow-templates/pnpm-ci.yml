@@ -1,0 +1,50 @@
+# SiC Lab CI template for Node.js + pnpm repositories.
+# Template docs: https://docs.github.com/en/actions/how-tos/reuse-automations/create-workflow-templates
+# Workflow syntax: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax
+# Actions are pinned to full-length commit SHAs, as GitHub recommends:
+# https://docs.github.com/en/actions/reference/security/secure-use
+#
+# Assumes: package.json has a "packageManager": "pnpm@x.y.z" field, a .nvmrc file gives the Node version,
+# and the root package.json has "test" and "typecheck" scripts. Edit the run steps if yours differ.
+name: CI
+
+on:
+  push:
+    branches: [$default-branch]
+  pull_request:
+    branches: [$default-branch]
+
+# Read-only token. Nothing in this workflow writes to the repository.
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # Reads the pnpm version from "packageManager" in package.json.
+      - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Test
+        run: pnpm test

@@ -1,0 +1,7 @@
+{
+  "name": "SiC Lab CI (Node.js + pnpm)",
+  "description": "Installs with pnpm, then runs typecheck and tests. Read-only token, actions pinned to commit SHAs.",
+  "iconName": "octicon package",
+  "categories": ["continuous-integration", "TypeScript", "JavaScript"],
+  "filePatterns": ["^pnpm-lock\\.yaml$"]
+}

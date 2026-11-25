@@ -1,0 +1,10 @@
+# Template chooser. Docs: https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#configuring-the-template-chooser
+# With blank issues off, people with write access still see "Blank issue (Maintainers only)".
+blank_issues_enabled: false
+contact_links:
+  - name: Question or support
+    url: https://github.com/thesiclab/.github/blob/main/SUPPORT.md
+    about: How to ask a question or get help. Please read this before opening an issue.
+  - name: Report a security vulnerability
+    url: https://github.com/thesiclab/.github/blob/main/SECURITY.md
+    about: Please do not open a public issue. Report it privately instead.

@@ -1,0 +1,101 @@
+# Issue form. Syntax: https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms
+# For sicrules (working package name: superego). A "catch" is one time a rule flagged or blocked a reply or tool call.
+name: Caught it (sicrules)
+description: Report a sicrules catch that was wrong (a misfire), a mistake it let through, or a catch that worked.
+title: "[Caught it]: "
+labels: ["caught-it"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for **sicrules** only. Other bugs go in the "Bug report" form.
+
+        Every report helps us measure each rule's precision. Good catches are useful too, not only mistakes.
+
+        **Your rules and replies can be private.** Paste only what you are happy to make public. Shorten or reword the text if you need to. Never paste API keys or tokens.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of report is this?
+      options:
+        - "Misfire: a rule flagged or blocked something that was fine"
+        - "Leak: the reply still broke the rule after the retry (logged as leaked)"
+        - "Miss: a rule should have caught this and did not fire at all"
+        - "Good catch: the rule caught a real mistake"
+    validations:
+      required: true
+  - type: input
+    id: rule-id
+    attributes:
+      label: Rule id
+      placeholder: e.g. no-sign-off
+    validations:
+      required: true
+  - type: textarea
+    id: rule-words
+    attributes:
+      label: The rule, in your words
+      description: The `words` field of the rule, as written in your rules file.
+    validations:
+      required: true
+  - type: dropdown
+    id: check-kind
+    attributes:
+      label: How does the rule check?
+      options:
+        - Regex pattern
+        - My own Python check
+        - Judge model
+        - Not sure
+    validations:
+      required: false
+  - type: dropdown
+    id: hook
+    attributes:
+      label: Where did it happen?
+      options:
+        - On a reply (Stop hook)
+        - On a tool call (PreToolUse hook)
+        - In `test` (replaying the rule's tests)
+        - Not sure
+    validations:
+      required: false
+  - type: input
+    id: catch-id
+    attributes:
+      label: Catch id
+      description: From the notice line or from `catches`. Leave empty for a miss.
+      placeholder: e.g. c_20261125T051842Z_539550
+    validations:
+      required: false
+  - type: textarea
+    id: text
+    attributes:
+      label: What the AI said or tried to run
+      description: The reply text or tool call the rule judged. Remove private data first.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it was right or wrong
+      description: For a misfire, why the reply was fine. For a leak or miss, what the mistake was.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: The sicrules version, or the commit SHA you run from.
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you submit
+      options:
+        - label: I removed secrets and private data from everything above.
+          required: true
+        - label: I agree to follow the [Code of Conduct](https://github.com/thesiclab/.github/blob/main/CODE_OF_CONDUCT.md).
+          required: true
