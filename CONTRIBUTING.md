@@ -55,6 +55,8 @@ Run the tests before you open a pull request, and say in the pull request what y
 | sicrules       | Python 3.11 or newer                       | `pip install -e '.[test]'` then `python -m pytest -q`           |
 | edition-engine | TypeScript, Node 22, pnpm                  | `pnpm install --frozen-lockfile`, `pnpm test`, `pnpm typecheck` |
 
+In sicrules, ten tests under `tests/lab/` read files that exist only on the lab machine, so they fail anywhere else. CI deselects exactly those ten; the workflow file lists them.
+
 A change that fixes a bug should add a test that fails without the fix. A change that adds behaviour should add tests for it. If you cannot test something, say so and say why.
 
 Each repository's README, AGENTS.md or CONTRACT.md may have more rules. Read them before you change that repository.

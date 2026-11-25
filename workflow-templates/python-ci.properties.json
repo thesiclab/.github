@@ -1,6 +1,6 @@
 {
   "name": "SiC Lab CI (Python)",
-  "description": "Installs the package with its test extra and runs pytest on two Python versions. Read-only token, actions pinned to commit SHAs.",
+  "description": "Installs the package with its test extra and runs pytest on the oldest and newest Python you support. Read-only token, actions pinned to commit SHAs.",
   "iconName": "octicon beaker",
   "categories": ["continuous-integration", "Python"],
   "filePatterns": ["^pyproject\\.toml$", "^setup\\.py$", "^requirements\\.txt$"]

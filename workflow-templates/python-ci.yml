@@ -7,6 +7,7 @@
 # Set the matrix to the oldest Python you support and the newest one.
 # If tests use pytest with a "test" extra in pyproject.toml, keep the Install and Test steps as they are.
 # For a standard-library-only project, delete the Install step and use: python -m unittest
+# The job names "Test (Python <version>)" become the required status check names.
 name: CI
 
 on:
@@ -25,13 +26,13 @@ concurrency:
 
 jobs:
   test:
-    name: test (Python ${{ matrix.python-version }})
+    name: Test (Python ${{ matrix.python-version }})
     runs-on: ubuntu-latest
     timeout-minutes: 15
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.11", "3.13"]
+        python-version: ["3.11", "3.15"]
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
