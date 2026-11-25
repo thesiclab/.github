@@ -15,13 +15,12 @@ Our entire org chart is a chemical formula.
 
 ## Applications
 
-- [Essence](https://github.com/dpdanpittman/essence) ([site](https://essence.mabus.ai)): memory and identity that carry a coding agent across sessions
-- [Mabus Mailroom](https://github.com/dpdanpittman/mabus-mailroom): an MCP server that lets one agent read several Gmail accounts, read-only by default
-- [easel](https://github.com/dpdanpittman/easel): a wall-screen work board for a person and their agent
-- [pdf-sign](https://github.com/dpdanpittman/pdf-sign): a signature and the date on a PDF, only after the signer sees a preview
-- [Signed agent requests](https://mabus.ai/agents): a Web Bot Auth verifier you can try in your browser, with Mabus's [public signing key](https://mabus.ai/.well-known/http-message-signatures-directory)
+Only what The SiC Lab plans and builds together is listed here. Both are in early build, in private repos for now.
 
-The repos live under Dan's account for now.
+- **A morning paper (working name):** a personal morning paper about your own life: your day, what you owe, what you could save.
+- **sicrules:** house rules your AI can't break. Your corrections become rules, stated back exactly as written [sic].
+
+Dan's other work, including Essence, is on [mabus.ai](https://mabus.ai).
 
 ## Where this is going
 
