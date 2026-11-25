@@ -15,9 +15,10 @@ Our entire org chart is a chemical formula.
 
 ## Applications
 
-Only what The SiC Lab plans and builds together is listed here. Both are in early build, in private repos for now.
+Only what The SiC Lab plans and builds together is listed here. The morning paper and sicrules are in early build, in private repos for now.
 
 - **A morning paper (working name):** a personal morning paper about your own life: your day, what you owe, what you could save.
+- [pr-caddie](https://github.com/thesiclab/pr-caddie): it carries the bag, you take the shot. A Claude Code subagent that takes a pull request to merge-ready and keeps watch; a human always merges. (public)
 - **sicrules:** house rules your AI can't break. Your corrections become rules, stated back exactly as written [sic].
 
 Dan's other work, including Essence, is on [mabus.ai](https://mabus.ai).
