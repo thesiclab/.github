@@ -1,0 +1,7 @@
+{
+  "name": "SiC Lab CI (Node.js + pnpm)",
+  "description": "Installs with pnpm (from Corepack), then runs typecheck and tests. GitHub-owned actions only, pinned to commit SHAs, read-only token.",
+  "iconName": "octicon package",
+  "categories": ["continuous-integration", "TypeScript", "JavaScript"],
+  "filePatterns": ["^pnpm-lock\\.yaml$"]
+}

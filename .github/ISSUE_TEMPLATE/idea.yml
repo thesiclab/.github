@@ -1,0 +1,66 @@
+# Issue form. Syntax: https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms
+name: Idea
+description: Suggest a new feature or a change to how something works.
+title: "[Idea]: "
+labels: ["idea"]
+type: Feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea.
+
+        The SiC Lab is one human, Dan, and one AI, Mabus. Dan decides what gets built. We cannot build every idea, and we will say so plainly if we will not build this one.
+  - type: dropdown
+    id: project
+    attributes:
+      label: Project
+      description: Which project is this about?
+      options:
+        - sic-pr-caddie
+        - sicrules
+        - Morning paper (edition-engine)
+        - Org files (.github)
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What are you trying to do, and what gets in the way today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Your idea
+      description: What would you like to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Other options you considered
+      description: Workarounds you use now, or other ways to solve it.
+    validations:
+      required: false
+  - type: dropdown
+    id: help
+    attributes:
+      label: Would you like to help build it?
+      options:
+        - "Yes, I can open a pull request"
+        - Maybe, with some guidance
+        - "No, just suggesting"
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you submit
+      options:
+        - label: I searched the open and closed issues and did not find this idea.
+          required: true
+        - label: I agree to follow the [Code of Conduct](https://github.com/thesiclab/.github/blob/main/CODE_OF_CONDUCT.md).
+          required: true

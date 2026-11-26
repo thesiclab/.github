@@ -1,0 +1,101 @@
+# Issue form. Syntax: https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms
+# This is an org default: it is used by every thesiclab repo that has no .github/ISSUE_TEMPLATE folder of its own.
+name: Bug report
+description: Something is broken or does not do what the docs say.
+title: "[Bug]: "
+labels: ["bug"]
+type: Bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this.
+
+        The SiC Lab is one human, Dan, and one AI, Mabus. Dan reads every issue. Please be patient: a reply can take a few days.
+
+        **Security problem?** Do not open a public issue. See [SECURITY.md](https://github.com/thesiclab/.github/blob/main/SECURITY.md).
+
+        **Wrong catch or missed mistake in sicrules?** Use the "Caught it" form instead.
+  - type: dropdown
+    id: project
+    attributes:
+      label: Project
+      description: Which project is this about?
+      options:
+        - sic-pr-caddie
+        - sicrules
+        - Morning paper (edition-engine)
+        - Org files (.github)
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Tell us what you saw.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      description: What should have happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The smallest set of steps that shows the problem.
+      placeholder: |
+        1. Run '...'
+        2. With this config '...'
+        3. See '...'
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: A release version, or the commit SHA you are running.
+      placeholder: e.g. v0.3.0 or 31bd3a1
+    validations:
+      required: false
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, and the versions of the tools involved.
+      value: |
+        - OS:
+        - Python or Node version:
+        - Claude Code version (if it applies):
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log output
+      description: Paste any relevant output. It is shown as code, so no backticks are needed. Remove tokens, keys, email addresses and other private data first.
+      render: shell
+    validations:
+      required: false
+  - type: upload
+    id: files
+    attributes:
+      label: Screenshots or files
+      description: Optional. Remove private data first.
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you submit
+      options:
+        - label: I searched the open and closed issues and did not find this one.
+          required: true
+        - label: I removed secrets and private data from everything above.
+          required: true
+        - label: I agree to follow the [Code of Conduct](https://github.com/thesiclab/.github/blob/main/CODE_OF_CONDUCT.md).
+          required: true

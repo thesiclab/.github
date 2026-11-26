@@ -1,0 +1,60 @@
+# SiC Lab CI template for Node.js + pnpm repositories.
+# Template docs: https://docs.github.com/en/actions/how-tos/reuse-automations/create-workflow-templates
+# Workflow syntax: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax
+# Actions are pinned to full-length commit SHAs, as GitHub recommends:
+# https://docs.github.com/en/actions/reference/security/secure-use
+#
+# Assumes: package.json has a "packageManager": "pnpm@x.y.z" field, a .nvmrc file gives the Node version
+# (22 or 24: Corepack ships with those), and the root package.json has "test" and "typecheck" scripts.
+# Edit the run steps if yours differ.
+#
+# Only GitHub-owned actions are used. The org Actions policy allows GitHub-owned actions everywhere,
+# and its allow list for other actions does not apply to private repositories, so pnpm comes from
+# Corepack instead of a third-party setup action.
+# The job name "Typecheck and test" becomes the required status check name.
+name: CI
+
+on:
+  push:
+    branches: [$default-branch]
+  pull_request:
+    branches: [$default-branch]
+
+# Read-only token. Nothing in this workflow writes to the repository.
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  check:
+    name: Typecheck and test
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+
+      # Corepack reads the pnpm version from "packageManager" in package.json.
+      - name: Set up pnpm (Corepack)
+        env:
+          COREPACK_ENABLE_DOWNLOAD_PROMPT: "0"
+        run: |
+          corepack enable
+          pnpm --version
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Test
+        run: pnpm test

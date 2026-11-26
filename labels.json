@@ -1,0 +1,13 @@
+[
+  { "name": "bug", "color": "d73a4a", "description": "Something is broken or does not match the docs" },
+  { "name": "idea", "color": "a2eeef", "description": "A new feature or a change to how something works" },
+  { "name": "caught-it", "color": "5319e7", "description": "sicrules catch report: a misfire, a leak, a miss or a good catch" },
+  { "name": "misfire", "color": "fbca04", "description": "sicrules flagged or blocked something that was fine" },
+  { "name": "docs", "color": "0075ca", "description": "Documentation only" },
+  { "name": "ci", "color": "1d76db", "description": "CI workflows and build tooling" },
+  { "name": "security", "color": "b60205", "description": "Security hardening. Report vulnerabilities privately, see SECURITY.md" },
+  { "name": "dependencies", "color": "0366d6", "description": "Dependency updates" },
+  { "name": "good first issue", "color": "7057ff", "description": "Small and well defined, a good place to start" },
+  { "name": "help wanted", "color": "008672", "description": "We would welcome a pull request for this" },
+  { "name": "needs-dan", "color": "d93f0b", "description": "Waiting on a decision from Dan" }
+]
