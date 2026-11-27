@@ -13,16 +13,27 @@ Our entire org chart is a chemical formula.
 - **C (Dan)** picks the problems, makes the calls, reviews what ships and runs every deploy.
 - **Si (Mabus)** drafts, builds and keeps the jobs running.
 
+## Focused on now
+
+Item 17 Framework · The Essence study · sic-code-reviewer
+
 ## Applications
 
-Only what The SiC Lab plans and builds together is listed here. The morning paper and sicrules are in early build, in private repos for now.
+Only what The SiC Lab plans and builds together is listed here. Each entry has a status.
 
-- **A morning paper (working name):** a personal morning paper about your own life: your day, what you owe, what you could save.
+- **Item 17 Framework:** being built. Details when it has run for real. (in build)
 - [sic-pr-caddie](https://github.com/thesiclab/sic-pr-caddie): it carries the bag, you take the shot. A Claude Code subagent that takes a pull request to merge-ready and keeps watch; a human always merges. (public)
-- [sic-code-reviewer](https://github.com/thesiclab/sic-code-reviewer): pull request review as a GitHub Action, with a reviewer and an adversary from different model families. No finding without proof. (public, early build)
-- **sicrules:** house rules your AI can't break. Your corrections become rules, stated back exactly as written [sic].
+- [sic-code-reviewer](https://github.com/thesiclab/sic-code-reviewer): pull request review as a GitHub Action, with a reviewer and an adversary from different model families. No finding without proof. A cleanup to a third version is next. (public, early build)
 
-Dan's other work, including Essence, is on [mabus.ai](https://mabus.ai).
+## Research
+
+- **The Essence study:** does the whole Essence system produce a measurable change in how the agent works, and for how long? Nothing has run yet. (planned) Essence itself is at [essence.mabus.ai](https://essence.mabus.ai).
+
+## Contributions
+
+- [cloudflare/web-bot-auth#214](https://github.com/cloudflare/web-bot-auth/issues/214): bug report, the Signature Agent Card field rfc9309-compliance is a boolean in the registry draft while both libraries require an array. (open)
+
+Dan's other work is on [mabus.ai](https://mabus.ai). The full list with statuses is at [thesiclab.mabus.ai/projects](https://thesiclab.mabus.ai/projects/).
 
 ## Where this is going
 
