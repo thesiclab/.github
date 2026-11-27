@@ -24,8 +24,6 @@ Only what The SiC Lab plans and builds together is listed here. Each entry has a
 - **Item 17 Framework:** being built. Details when it has run for real. (in build)
 - [sic-pr-caddie](https://github.com/thesiclab/sic-pr-caddie): it carries the bag, you take the shot. A Claude Code subagent that takes a pull request to merge-ready and keeps watch; a human always merges. (public)
 - [sic-code-reviewer](https://github.com/thesiclab/sic-code-reviewer): pull request review as a GitHub Action, with a reviewer and an adversary from different model families. No finding without proof. A cleanup to a third version is next. (public, early build)
-- **A morning paper (working name):** a personal morning paper about your own life: your day, what you owe, what you could save. (parked)
-- **sicrules:** house rules your AI can't break. Your corrections become rules, stated back exactly as written [sic]. (parked)
 
 ## Research
 
